@@ -28,7 +28,7 @@ describe('adapter', function() {
     it('should drop the table', function(done) {
 
       adapter.drop('test', 'test_drop', function(err, result) {
-        adapter.describe('test', 'test_drop', function(err, result) {
+        adapter.describe('test', 'test_drop', null, function(err, result) {
           should.not.exist(result);
           done();
         });

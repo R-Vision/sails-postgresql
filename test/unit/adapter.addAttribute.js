@@ -29,7 +29,7 @@ describe('adapter', function() {
     it('should add column color to the table', function(done) {
 
       adapter.addAttribute('test', 'test_addAttribute', 'color', 'string', function(err, result) {
-        adapter.describe('test', 'test_addAttribute', function(err, result) {
+        adapter.describe('test', 'test_addAttribute', null, function(err, result) {
 
           // Test Row length
           Object.keys(result).length.should.eql(4);

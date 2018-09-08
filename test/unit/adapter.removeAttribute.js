@@ -28,7 +28,7 @@ describe('adapter', function() {
     it('should remove column field_2 from the table', function(done) {
 
       adapter.removeAttribute('test', 'test_removeAttribute', 'field_2', function(err) {
-        adapter.describe('test', 'test_removeAttribute', function(err, result) {
+        adapter.describe('test', 'test_removeAttribute', null, function(err, result) {
 
           // Test Row length
           Object.keys(result).length.should.eql(2);
